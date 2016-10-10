@@ -1,0 +1,37 @@
+<html><head><link rel=stylesheet href=store.css><body><script src=store_menu.js></script>
+
+    <div id=head><h1>Donate</h1></div>
+    
+    <div id=left>
+        <form id=donation action="donate_tr.php" method="post">
+        <table id=donation_struct>
+            <tr>
+                <td><input type=radio name="type" value="imo">In memory of: </input><br>
+                    <input type=radio name="type" value="iho">In honor of: </input><br>
+                    <input type=radio name="type" value="gift">Gift for: </input><br>
+                    <input type=radio name="type" value="other">Other: </input></td>
+                <td><textarea name=gift_info rows=4 placeholder="Name & Mailing Address"></textarea></td>
+            </tr>
+            <tr>
+                <td id=don_amt><br>Donate: $<input name=amount type=number min=25 step=25 value=100>.00</td>
+                <td><center><br><input id=don_submit type=submit value="Donate Now"></center></td>
+            </tr>
+        </table></form>
+        <p style="font-size:10pt; width:370px"><em>Because Service Dogs of Virginia is a 501(c)(3) nonprofit organization, and no goods or services are provided in exchange for your unrestricted financial donation, your contribution is tax-deductible to the extent permitted by law. </em></p>
+    </div>
+    
+    <div id=right>
+        It costs approximately $40,000 over a two year period to raise, train, and place a successful service dog. We have, on average, 25 dogs in various stages of training at any given time. Through the generous support of caring individuals, businesses and foundations, Service Dogs of Virginia is able to provide service dogs at no cost to those in need.
+        <p></p>
+        A gift of ...<br>
+        <ul>
+        <li><b>$25 helps provide</b> a collar, leash and food dishes for a puppy</li>
+        <li><b>$50 helps feed</b> a service dog in training for two months</li>
+        <li><b>$100 helps pay</b> for a vest and tether system for an autism service dog</li>
+        <li><b>$250 helps cover</b> a puppy's vaccinations and vet exams</li>
+        <li><b>$500 helps pay</b> for training equipment</li>
+        <li><b>$1000 helps cover</b> the cost of a puppy</li></ul>
+        <p>We do not receive any government funding. Therefore, every donation, no matter how small, adds up to make a significant impact on a person's life.</p>
+    </div>
+    
+</body></head></html>

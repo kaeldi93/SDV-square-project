@@ -1,0 +1,46 @@
+/* layout styles */
+body {background-image:url(./bg.jpg); background-size:cover; background-repeat:no-repeat; background-position:right top; background-pos font-family:Adobe Garamond Pro;}
+
+#menu {position:fixed; z-index:99; height:75px; left:0px; right:0px; background-color:#72A68F;}
+#menu table {text-align:center; color:white; position:absolute; top:25px; right:35px; font-size:28px; font-family:Century Gothic; width:800px;}
+#menu td:hover {color:#FFDB91}
+#menu a {color:inherit; text-decoration:inherit}
+
+#opaque {position:fixed; left:0px; top:0px; width: 100%; height:100%; background:linear-gradient(to top, white 65%, rgba(225,225,225,0)); opacity:.65;}
+#sdvtitle {position:fixed; z-index:99; top:45px; left:35px;}
+#head {position:absolute; top:125px; left:37px;}
+#left {position:absolute; top:190px; left:35px; height:75%; width:45%;}
+#right {position:absolute;top:190px; right:35px; height:75%; width:45%;}
+
+i{font-size:18px; color:#CE1019;}
+h1{font-family:century gothic;}
+#don_submit {font-size:12pt; font-family:Century Gothic; border-radius:20px;}
+
+/* Checkout styles */
+.product_image {width:75px; border:solid #FFDB91;}
+#popup {font-family:Century Gothic; box-shadow:3px 3px 5px gray; padding:10px; position:fixed; top:50%; margin-top:-100px; margin-left:-150px; left:50%; width:300px; height:200px; z-index:50; background-color:white; border: solid #72A68F;}
+#popup input {font-family:Century Gothic; font-size:15pt;}
+#popup button {font-family:Century Gothic; font-size:15pt;}
+#popup_link {cursor:pointer;}
+#popup_cover {position:fixed; width:100%; height:100%; left:0px; top:0px; z-index:49; background-color:white; opacity:.15;}
+.item_row_selector {cursor:pointer; position:absolute; top:245; left:25px; width:400px; z-index:50; height:102px; background-color:white; opacity:.5; box-shadow:3px 3px 5px black;}
+
+/* Donation styles */
+#don_amt {font-family:Century Gothic; font-size:12pt;}
+#don_amt input {font-size:12pt; font-family:Century Gothic; width:57px; text-align:center;}
+
+
+/* SAD styles */
+#la {position:relative; float:left; width:25%;}
+#details {position:relative; float:right; width:75%;}
+#left_end {clear:both; width:100%;}
+
+#sad {width:100%; text-align:center; font-family:century gothic;}
+#sad td{padding-bottom:20px}
+#sad td:hover {opacity:.90}
+#sad img{width:100px; border:solid #FFDB91}
+
+.sh {display:none}
+select{font-family:century gothic; font-size:12pt}
+
+#blurb span {font-size:15pt; color:#CE1019}
