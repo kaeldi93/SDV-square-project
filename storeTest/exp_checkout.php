@@ -9,13 +9,15 @@
 <script src="sq.js"></script>
 
 	<?php include 'checkout.php'; ?>
+	<form id=gift_form method=post action=add_gift.php></form>
 	
 	<!--Allow User to Select Items to Apply Recipient To-->
 	<div id=select_content style="display:none">
 		<div id=popup_cover onclick="popup_close();"></div>
-		<div id=select_item style='z-index:51; box-shadow:3px 3px 5px gray;'>
+		<div id=select_item>
 			 <?php echo $selector_contents; ?>
 		</div>
+		<table id=selector_table class=check_table><?php echo $cart_contents; ?></table>
 	</div>
 	
 	<!--Add Gift Recipient Popup-->
@@ -26,13 +28,15 @@
 			<span onclick="popup_close();" style="cursor:pointer;"><i style="color:#72A68F" class="fa fa-close"></i></span>
 			<center>
 				Gift Recipient
-				<form id=gift_form method=post action=add_gift.php>
-				<input type=hidden id=gift_product name=gift_product value=""><input type=hidden id=gift_price name=gift_price value=""><input type=hidden id=gift_options name=gift_options value="">
+				<!--<form id=gift_form method=post action=add_gift.php>-->
 				<input name=gift_name size=25 type=text placeholder="Full Name"><br>
 				<input name=gift_address1 size=25 type=text placeholder="Street Address, Opt Apt. #"><br>
 				<input name=gift_address2 size=25 type=text placeholder="City, ST 00000"><br>
+				<!--<textarea name=gift_memo style="width:266px; font-family: Century Gothic; font-size:11pt" maxlength=150 placeholder="Opt. designation, email for S.A.D. updates, or message"></textarea>-->
+				<input name=email size=25 style="width:266px; font-family: Century Gothic; font-size:11pt" type=text placeholder="Email (for Sponsor a Dog updates)"><br>
+				<input name=message size=25 style="width:266px; font-family: Century Gothic; font-size:11pt" type=text placeholder="SAD email or Designation or Message"><br>
 				<p><button type=button onclick="select_display();">Add</button>
-				</form>
+				<!--</form>-->
 			</center>
 		</div>
 	</div>
@@ -42,7 +46,7 @@
     <div id=left>
         <p>
         <span  id=popup_link onclick="popup();" href=exp_checkout.php?gift=true><i class="fa fa-gift"></i> Add Gift Recipient</span> | <a style="color:inherit; text-decoration:inherit;" href="exp_donate.html"><i class="fa fa-paw"></i> Add Donation</a> | <a style="color:inherit; text-decoration:inherit;" href="exp_checkout.php?clear=true"><i class="fa fa-trash"></i> Clear Cart</a><br>
-        <p><table style=width:400px;><?php echo $cart_contents; ?></table>
+        <p><table class=check_table><?php echo $cart_contents; ?></table>
         <p><b>Total: $<?php echo $cart_total; ?></b> | Items: <?php echo $num_items; ?></p>
     </div>
     
@@ -88,11 +92,9 @@
 		<p>
 		<button id="donate1" type="button" onclick="requestCardNonce();"><b>Submit Payment</b></button>
         <!--Hidden fields-->
-        <input name=product type=hidden value="<?php echo $_POST['product_name']; ?>" >
-		<input name=option_1 type=hidden value="<?php echo $_POST['shirt_color']; ?>" >
-		<input name=option_2 type=hidden value="<?php echo $_POST['current_sizes']; ?>" >
-		<input name=price type=hidden value="<?php echo $_POST['product_price']; ?>" >
-		<input name=quantity type=hidden value="<?php echo $_POST['quantity']; ?>">
+        
+		<input name=price type=hidden value="<?php echo $cart_total; ?>" >
+		<input name=quantity type=hidden value="<?php echo $num_items; ?>" >
 		<input id="nonce_capture" name="nonce_capture" type=hidden value="">
 		<input id="hidden_zip" name="hidden_zip" type=hidden value="">
 		<input id="last_four" name="last_four" type=hidden value="">

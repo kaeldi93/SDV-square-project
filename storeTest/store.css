@@ -6,7 +6,7 @@ body {background-image:url(./bg.jpg); background-size:cover; background-repeat:n
 #menu td:hover {color:#FFDB91}
 #menu a {color:inherit; text-decoration:inherit}
 
-#opaque {position:fixed; left:0px; top:0px; width: 100%; height:100%; background:linear-gradient(to top, white 65%, rgba(225,225,225,0)); opacity:.65;}
+#opaque {position:fixed; left:0px; top:0px; width: 100%; height:100%; background:linear-gradient(to top, white 80%, rgba(225,225,225,0)); opacity:.65;}
 #sdvtitle {position:fixed; z-index:99; top:45px; left:35px;}
 #head {position:absolute; top:125px; left:37px;}
 #left {position:absolute; top:190px; left:35px; height:75%; width:45%;}
@@ -22,8 +22,11 @@ h1{font-family:century gothic;}
 #popup input {font-family:Century Gothic; font-size:15pt;}
 #popup button {font-family:Century Gothic; font-size:15pt;}
 #popup_link {cursor:pointer;}
-#popup_cover {position:fixed; width:100%; height:100%; left:0px; top:0px; z-index:49; background-color:white; opacity:.15;}
-.item_row_selector {cursor:pointer; position:absolute; top:245; left:25px; width:400px; z-index:50; height:102px; background-color:white; opacity:.5; box-shadow:3px 3px 5px black;}
+#popup_cover {position:fixed; width:100%; height:100%; left:0px; top:0px; z-index:49; background-color:gray; opacity:.3;}
+.item_row_selector {cursor:pointer; position:absolute; top:245; left:25px; width:500px; z-index:52; height:102px; background-color:white; opacity:.1; box-shadow:3px 3px 5px black;}
+#selector_table {width:500px; position:absolute; z-index:49; top:245px; left:25px; background-color:white;}
+#selector_table tr{box-shadow:3px 3px 5px black}
+.check_table td{padding-right:20px;}
 
 /* Donation styles */
 #don_amt {font-family:Century Gothic; font-size:12pt;}

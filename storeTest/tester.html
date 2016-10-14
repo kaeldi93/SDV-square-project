@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <div id=container>
+            <div>First</div>
+            <div>Second</div>
+            <div>Third</div>
+        </div>
+        <input type=button onclick="changeUp();" value=Process>
+        <div id=new_container>
+            
+        </div>
+    </body>
+</html>
+
+<script>
+    function changeUp() {
+        var x = document.getElementById("container").children;
+        document.getElementById("new_container").appendChild(x[0]);
+        document.getElementById("new_container").appendChild(x[0]);
+        document.getElementById("new_container").appendChild(x[0]);
+    }
+</script>
