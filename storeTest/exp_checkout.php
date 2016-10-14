@@ -28,15 +28,11 @@
 			<span onclick="popup_close();" style="cursor:pointer;"><i style="color:#72A68F" class="fa fa-close"></i></span>
 			<center>
 				Gift Recipient
-				<!--<form id=gift_form method=post action=add_gift.php>-->
-				<input name=gift_name size=25 type=text placeholder="Full Name"><br>
-				<input name=gift_address1 size=25 type=text placeholder="Street Address, Opt Apt. #"><br>
-				<input name=gift_address2 size=25 type=text placeholder="City, ST 00000"><br>
-				<!--<textarea name=gift_memo style="width:266px; font-family: Century Gothic; font-size:11pt" maxlength=150 placeholder="Opt. designation, email for S.A.D. updates, or message"></textarea>-->
-				<input name=email size=25 style="width:266px; font-family: Century Gothic; font-size:11pt" type=text placeholder="Email (for Sponsor a Dog updates)"><br>
-				<input name=message size=25 style="width:266px; font-family: Century Gothic; font-size:11pt" type=text placeholder="SAD email or Designation or Message"><br>
+				<input name=gift_name style=width:272px size=25 type=text placeholder="Full Name"><br>
+				<input name=gift_address1 style=width:272px size=25 type=text placeholder="Street Address, Opt Apt. #"><br>
+				<input name=gift_address2 style=width:272px size=25 type=text placeholder="City, ST 00000"><br>
+				<input name=gift_memo size=25 style="width:272px; font-family: Century Gothic; font-size:11pt" type=text placeholder="Email*, Designation, or Message"><br>
 				<p><button type=button onclick="select_display();">Add</button>
-				<!--</form>-->
 			</center>
 		</div>
 	</div>
@@ -45,9 +41,9 @@
     
     <div id=left>
         <p>
-        <span  id=popup_link onclick="popup();" href=exp_checkout.php?gift=true><i class="fa fa-gift"></i> Add Gift Recipient</span> | <a style="color:inherit; text-decoration:inherit;" href="exp_donate.html"><i class="fa fa-paw"></i> Add Donation</a> | <a style="color:inherit; text-decoration:inherit;" href="exp_checkout.php?clear=true"><i class="fa fa-trash"></i> Clear Cart</a><br>
+        <span  id=popup_link onclick="popup();" href=exp_checkout.php?gift=true><i class="fa fa-gift"></i> Add Designation/Recipient</span> | <a style="color:inherit; text-decoration:inherit;" href="exp_donate.html"><i class="fa fa-paw"></i> Add Donation</a> | <a style="color:inherit; text-decoration:inherit;" href="exp_checkout.php?clear=true"><i class="fa fa-trash"></i> Clear Cart</a><br>
         <p><table class=check_table><?php echo $cart_contents; ?></table>
-        <p><b>Total: $<?php echo $cart_total; ?></b> | Items: <?php echo $num_items; ?></p>
+        <p><b>Total: $<?php echo $cart_total; ?></b> | Items: <?php echo $num_items; ?><br><em style=font-size:10pt>Questions? Call (803) 459-6651</em></p>
     </div>
     
     <div id=right>

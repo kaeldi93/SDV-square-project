@@ -23,7 +23,10 @@
         $size_options = "";
         
         $product_id = $_GET["product"];
-        $results = $conn->query("SELECT * FROM merch WHERE product_id='$product_id'");
+        $stmt = $conn->prepare("SELECT * FROM merch WHERE product_id=$product_id");
+        $stmt->bind_param('i', $product_id);
+        $stmt->execute();
+        $results = $stmt->get_result();
         if($results->num_rows > 0) {
             $row = $results->fetch_assoc();
             $product = $row["product"];
@@ -33,7 +36,10 @@
             if($row["category"] == 'shirt') {
                 
                 //set t-shirt display
-                $results = $conn->query("SELECT option_name, sizes, selected FROM merch_options WHERE product_id='$product_id'");
+                $stmt = $conn->prepare("SELECT option_name, sizes, selected FROM merch_options WHERE product_id=?");
+                $stmt->bind_param('i', $product_id);
+                $stmt->execute();
+                $results = $stmt->get_result();
                 if($results->num_rows > 0) {
                     while($row = $results->fetch_assoc()) {
                         $option_name = $row["option_name"];
